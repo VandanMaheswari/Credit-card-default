@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block body %}
+   <div class = 'form-div'>
+    <h1> Enter The Details here :
+    <form action="{{url_for('predict_datapoint')}}" method="POST">  
+      
+      
+      <div class="form-group">
+          <label for="LIMIT_BAL">LIMIT_BAL:</label>
+          <input type="text" id="LIMIT_BAL" name="LIMIT_BAL" placeholder="Enter LIMIT_BAL value (float)">
+      </div>
+  
+      <div class="form-group">
+          <label for="SEX">SEX:</label>
+          <input type="text" id="SEX" name="SEX" placeholder="Enter SEX value (float)">
+      </div>
+  
+      <div class="form-group">  
+          <label for="EDUCATION">EDUCATION:</label>
+          <input type="text" id="EDUCATION" name="EDUCATION" placeholder="Enter EDUCATION value (float)">
+      </div>
+      
+      <div class="form-group">
+          <label for="AGE">AGE:</label>
+          <input type="text" id="AGE" name="AGE" placeholder="Enter AGE value (float)">
+      </div>
+    
+      <div class="form-group">
+          <label for="avg_default">avg_default:</label>
+          <input type="text" id="avg_default" name="avg_default" placeholder="Enter avg_default value (float)">
+      </div>
+    
+      <div class="form-group">
+          <label for="avg_bill_amt">avg_bill_amt:</label>
+          <input type="text" id="avg_bill_amt" name="avg_bill_amt" placeholder="Enter avg_bill_amt value (float)">
+      </div>   
+      
+      <div class="form-group">
+        <label for="avg_pay_amt">avg_pay_amt:</label>
+        <input type="text" id="avg_pay_amt" name="avg_pay_amt" placeholder="Enter avg_pay_amt value (float)">
+      </div> 
+    
+  
+  <div style="clear:both;"></div>
+  
+    <input type="submit" value="Submit" class = "submit-btn">
+  
+  </form>
+</div>
+  
+{% endblock %}
+</body>
+</html>
